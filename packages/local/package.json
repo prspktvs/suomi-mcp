@@ -1,0 +1,37 @@
+{
+  "name": "@prspktvs/suomi-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.prspktvs/suomi-mcp",
+  "description": "Local-first MCP server for Finnish official statistics",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "bin": {
+    "suomi-mcp": "./dist/cli.js"
+  },
+  "scripts": {
+    "prebuild": "npm run build --workspace @prspktvs/suomi-mcp-core",
+    "pretest": "npm run build",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.3.1",
+    "parse5": "^8.0.1",
+    "sql.js": "^1.14.2",
+    "zod": "^4.6.5",
+    "@prspktvs/suomi-mcp-core": "0.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@types/sql.js": "^1.4.11"
+  }
+}

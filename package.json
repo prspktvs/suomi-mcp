@@ -1,0 +1,20 @@
+{
+  "name": "suomi-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Local-first MCP server for Finnish official statistics",
+  "type": "module",
+  "workspaces": ["packages/core", "packages/local"],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "check": "npm run build --workspace @prspktvs/suomi-mcp-core && npm run build --workspace @prspktvs/suomi-mcp",
+    "build": "npm run check",
+    "test": "npm run test --workspace @prspktvs/suomi-mcp-core && npm test --workspace @prspktvs/suomi-mcp"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.3"
+  }
+}

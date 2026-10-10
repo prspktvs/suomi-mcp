@@ -1,0 +1,64 @@
+{
+  "name": "@prspktvs/suomi-mcp-core",
+  "version": "0.1.0",
+  "mcpName": "io.github.prspktvs/suomi-mcp",
+  "description": "Shared contracts and transport-independent logic for Finnish statistics MCP servers",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./contracts": {
+      "types": "./dist/contracts/retrieval.d.ts",
+      "import": "./dist/contracts/retrieval.js"
+    },
+    "./audit": {
+      "types": "./dist/audit/numbers.d.ts",
+      "import": "./dist/audit/numbers.js"
+    },
+    "./pxweb": {
+      "types": "./dist/pxweb/index.d.ts",
+      "import": "./dist/pxweb/index.js"
+    },
+    "./catalog": {
+      "types": "./dist/catalog/port.d.ts",
+      "import": "./dist/catalog/port.js"
+    },
+    "./providers": {
+      "types": "./dist/providers/index.d.ts",
+      "import": "./dist/providers/index.js"
+    },
+    "./session/v2": {
+      "types": "./dist/session/v2.d.ts",
+      "import": "./dist/session/v2.js"
+    },
+    "./calc": {
+      "types": "./dist/calc/index.d.ts",
+      "import": "./dist/calc/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run packages/core/test --root ../.. --config vitest.config.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.3.1",
+    "zod": "^4.6.5"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.3"
+  }
+}

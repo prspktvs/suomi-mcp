@@ -1,0 +1,75 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.prspktvs/suomi-mcp",
+  "title": "AgentFinland Finnish Statistics",
+  "description": "Find, inspect, and retrieve official Finnish statistics from multiple publishers.",
+  "websiteUrl": "https://agentfinland.fi",
+  "repository": {
+    "url": "https://github.com/prspktvs/suomi-mcp",
+    "source": "github",
+    "subfolder": "packages/local"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agentfinland.fi/mcp"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@prspktvs/suomi-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SUOMI_MCP_REGISTRY_URL",
+          "description": "Hosted discovery catalog origin; defaults to https://agentfinland.fi.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "SUOMI_MCP_API_KEY",
+          "description": "Optional key for a higher catalog rate limit.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "SUOMI_MCP_PROVIDERS",
+          "description": "Optional comma-separated list of enabled publisher IDs.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "SUOMI_MCP_HELSINKI",
+          "description": "Set to 0 to disable the enabled-by-default beta Helsinki HTML-form provider.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "SUOMI_MCP_CACHE_DIR",
+          "description": "Optional schema and catalog metadata cache directory; set to off to disable disk caching.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "SUOMI_MCP_MAX_CELLS",
+          "description": "Maximum cells in one publisher query, from 1 to 120000.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "SUOMI_MCP_SQL_ENGINE",
+          "description": "Set to node, wasm, or auto.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Suomi-MCP software is distributed under the MIT License. Statistical data are requested from their publishers at runtime and are not bundled with this npm package. Publisher data remain subject to the terms attached to each dataset; check the returned source page and metadata before redistributing data or derived files.
+
+Known publisher terms reviewed 2026-10-11:
+
+- Statistics Finland's open statistical data are generally under CC BY 4.0 and require source attribution. Product-specific terms can differ: https://stat.fi/en/about-us/get-to-know-statistics-finland/legislation/terms-of-use
+- Luke's statistics database states CC BY 4.0 terms, subject to dataset-specific notices: https://www.luke.fi/en/statistics/about-statistics/terms-of-use-statistics
+- The ETK statistics database is under CC BY 4.0 and requires attribution to the Finnish Centre for Pensions: https://www.etk.fi/tutkimus-tilastot-ja-ennusteet/tilastot/tilastotietokanta/
+- Helsinki regional statistics describe the dataset-specific source and CC BY 4.0 attribution terms: https://kartta.hel.fi/paikkatietohakemisto/pth/?id=557
+- Traficom's public data is generally CC BY 4.0, with exceptions and extra conditions for some material: https://www.traficom.fi/en/transport-system/geoinformationsmaterial/use-and-licences-data
+- Vero's public PxWeb database is listed among Statistics Finland's database interfaces. Consult the selected table's terms and attribution metadata: https://stat.fi/en/services/statistical-data-services/open-data-and-interfaces/interface-use-of-databases
+- Visit Finland and Kototietokanta resources may have dataset-specific attribution or rights. Check each publisher's table metadata and source page before reuse.
+
+Source cards may contain LLM-generated descriptions. They are discovery metadata, not publisher statements, official evidence, or a license grant. Suomi-MCP is independent and is not affiliated with the listed publishers.

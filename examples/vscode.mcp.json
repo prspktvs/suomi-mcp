@@ -1,0 +1,11 @@
+{
+  "mcp": {
+    "servers": {
+      "suomi-mcp": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "@prspktvs/suomi-mcp"]
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "suomi-mcp": {
+      "command": "npx",
+      "args": ["-y", "@prspktvs/suomi-mcp"]
+    }
+  }
+}
