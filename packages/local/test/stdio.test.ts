@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it } from "vitest";
 import { Client } from "@modelcontextprotocol/client";
 import { StdioClientTransport } from "@modelcontextprotocol/client/stdio";
+import { fileURLToPath } from "node:url";
 
 let client: Client | undefined;
 
@@ -11,7 +12,7 @@ afterEach(async () => {
 
 describe("local stdio server", () => {
   it("negotiates the modern protocol and retains an explicit context across tool calls", async () => {
-    const entry = new URL("../dist/cli.js", import.meta.url).pathname;
+    const entry = fileURLToPath(new URL("../dist/cli.js", import.meta.url));
     const transport = new StdioClientTransport({
       command: process.execPath,
       args: [entry],
