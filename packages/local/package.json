@@ -33,5 +33,14 @@
   "devDependencies": {
     "@modelcontextprotocol/client": "^2.3.1",
     "@types/sql.js": "^1.4.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prspktvs/suomi-mcp.git",
+    "directory": "packages/local"
+  },
+  "bugs": {
+    "url": "https://github.com/prspktvs/suomi-mcp/issues"
+  },
+  "homepage": "https://github.com/prspktvs/suomi-mcp#readme"
 }
